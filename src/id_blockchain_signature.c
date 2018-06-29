@@ -1,24 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "id_blockchain_hashing.h"
 #include "id_blockchain_signature.h"
 
-
-
-void id_blockchain_sha256(const unsigned char *byte_string, 
-												  size_t len,
-												  unsigned char digest[SHA256_DIGEST_LENGTH])
-{
-	SHA256(byte_string, len, digest);
-}
-
-void id_blockchain_sha512(const unsigned char *byte_string, 
-													size_t len,
-													unsigned char digest[SHA512_DIGEST_LENGTH])
-{
-	SHA512(byte_string, len, digest);
-}
 
 ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa256_keygen(void)
 {

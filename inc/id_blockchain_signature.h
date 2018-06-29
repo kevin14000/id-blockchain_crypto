@@ -16,10 +16,15 @@
 #ifndef ID_BLOCKCHAIN_SIGNATURE_H
 #define ID_BLOCKCHAIN_SIGNATURE_H
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include <openssl/ec.h>
 #include <openssl/bn.h>
 #include <openssl/ecdsa.h>
 #include <openssl/evp.h>
+#include <openssl/sha.h>
+#include "id_blockchain_hashing.h"
 
 /**
  * \typedef ID_BLOCKCHAIN_EC_KEY
@@ -65,7 +70,7 @@ ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa256_keygen(void);
 
 
 /**
- * \fn ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa512_keygen(void)
+ * \fn ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa521_keygen(void)
  *
  * \brief Generation of private and public keys for a a signature ECDSA.
  *        The choice of the curve has set up to have a 512 bits of 
@@ -73,7 +78,7 @@ ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa256_keygen(void);
  *
  * \param[out] the couple of keys
 */
-ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa512_keygen(void);
+ID_BLOCKCHAIN_EC_KEY *id_blockchain_ecdsa521_keygen(void);
 
 /**
  * \fn void id_blockchain_eckey_free(ID_BLOCKCHAIN_EC_KEY *eckey)
@@ -153,7 +158,7 @@ ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa256_do_sign
                           ID_BLOCKCHAIN_EC_KEY *eckey);
                           
 /**
- * \fn ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa512_do_sign
+ * \fn ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa521_do_sign
  *                         (const unsigned char *msg,
  *			  size_t len,
  *                        ID_BLOCKCHAIN_EC_KEY *eckey)
@@ -165,7 +170,7 @@ ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa256_do_sign
  * \param[in] len lenght of the message msg
  * \param[in] eckey couple of keys containing an initialized private one
 */
-ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa512_do_sign
+ID_BLOCKCHAIN_ECDSA_SIG* id_blockchain_ecdsa521_do_sign
                          (const unsigned char *msg,
 			  size_t len,
                           ID_BLOCKCHAIN_EC_KEY *eckey);
@@ -191,7 +196,7 @@ int id_blockchain_ecdsa256_do_verify(const unsigned char *msg,
 				     ID_BLOCKCHAIN_EC_KEY* eckey);
                     								 
 /**
- * \fn int id_blockchain_ecdsa512_do_verify(const unsigned char *msg,
+ * \fn int id_blockchain_ecdsa521_do_verify(const unsigned char *msg,
  *				     size_t len,
  *				     const ID_BLOCKCHAIN_ECDSA_SIG *sig,
  *				     ID_BLOCKCHAIN_EC_KEY* eckey)
@@ -205,7 +210,7 @@ int id_blockchain_ecdsa256_do_verify(const unsigned char *msg,
  * \param[in] sig signature to check
  * \param[in] eckey couple of keys with an initialized public one
 */
-int id_blockchain_ecdsa512_do_verify(const unsigned char *msg,
+int id_blockchain_ecdsa521_do_verify(const unsigned char *msg,
 				     size_t len,
 				     const ID_BLOCKCHAIN_ECDSA_SIG *sig,
 				     ID_BLOCKCHAIN_EC_KEY* eckey);
