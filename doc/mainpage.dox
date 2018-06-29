@@ -1,0 +1,26 @@
+/**
+ * \mainpage
+ *
+ * \author Morgan Barbier <morgan.barbier@ensicaen.fr>
+ *
+ * \date 2018-06-29
+ * \version 1.0
+ *
+ * \section description Description
+ *
+ * This is a part of the Projet d'Investissement d'Avenir (PIA) ID-Blockchain. The main objectif of ID-Blockchain_crypto is to contribute to the Proof Of Concept of the project ID-Blockchain, proposing user friendly crypto functions needed into the project ID-Blockchain. This mini crypto library was developped in C.
+ *
+ * \section compilation Compilation
+ *
+ *
+ *
+ * \section feature Features
+ * \subsection hash Hash functions
+ *
+ * \subsection signature Signature
+ *
+ *
+ *
+ * \section example Example
+ *
+ 
