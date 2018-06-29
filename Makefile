@@ -43,10 +43,10 @@ ExecuteTest:
 
 # Nettoyage
 clean:
-	rm $(SRCDIR)/*~
-	rm $(HEADDIR)/*~
-	rm $(LIBDIR)/*.o
+	rm -f $(SRCDIR)/*~
+	rm -f $(HEADDIR)/*~
+	rm -f $(LIBDIR)/*.o
 
 # Nettoyage complet
 superclean: clean
-	rm $(BIN)
+	rm -f $(BIN)
