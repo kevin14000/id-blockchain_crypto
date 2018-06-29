@@ -1,3 +1,17 @@
+/**
+ * \file id_blockchain_crypto_tools.h
+ *
+ * \brief Header file for containing the definition of
+ *        tools for this crypto library for the project
+ *        ID-Blockchain.
+ *
+ * \auhtors Kevin Atighehchi <kevin.atighehchi@unicaen.fr>
+ *          Morgan Barbier <morgan.barbier@ensicaen.fr>
+ *
+ * \version 1.0
+ *
+ * \date 2018-06-29
+ */
 #ifndef __ID_BLOCKCHAIN_CRYPTO_TOOLS_H__
 #define __ID_BLOCKCHAIN_CRYPTO_TOOLS_H__
 
