@@ -17,7 +17,7 @@ BINDIR=bin
 CC=gcc
 CFLAGS=-I$(HEADDIR) -g -Wall -pedantic -Os
 LDFLAGS=-lssl -lcrypto
- 
+
 # Les différents sources *.c
 SRC=$(wildcard $(SRCDIR)/*.c)
 # Les objets correspondants à créer
@@ -43,6 +43,8 @@ ExecuteTest:
 
 # Nettoyage
 clean:
+	rm $(SRCDIR)/*~
+	rm $(HEADDIR)/*~
 	rm $(LIBDIR)/*.o
 
 # Nettoyage complet

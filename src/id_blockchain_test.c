@@ -1,5 +1,4 @@
-#include "id_blockchain_hashing.h"
-#include "id_blockchain_signature.h"
+#include "id_blockchain_crypto.h"
 #include <string.h>
 
 int main()
