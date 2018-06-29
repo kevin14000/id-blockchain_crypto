@@ -112,14 +112,3 @@ int id_blockchain_ecdsa521_do_verify(const unsigned char *msg, size_t len,
 	int ret = ECDSA_do_verify(digest, SHA512_DIGEST_LENGTH, sig, eckey); 
 	return ret; 
 }
-
-void print_string_hex(const unsigned char *msg, size_t len)
-{
-	int i;
-	for(i = 0; i < len; i++)
-	{
-		printf("%02x ", msg[i]);
-	}
-	printf("\n");
-}
-

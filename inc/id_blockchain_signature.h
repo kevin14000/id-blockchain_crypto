@@ -16,9 +16,6 @@
 #ifndef ID_BLOCKCHAIN_SIGNATURE_H
 #define ID_BLOCKCHAIN_SIGNATURE_H
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <openssl/ec.h>
 #include <openssl/bn.h>
 #include <openssl/ecdsa.h>
@@ -216,23 +213,12 @@ int id_blockchain_ecdsa521_do_verify(const unsigned char *msg,
 				     ID_BLOCKCHAIN_EC_KEY* eckey);
 
 /**
- * \fn void print_string_hex(const unsigned char *msg, size_t len)
- *
- * \brief Print in the standard output a string in hexadecimal
- *        form
- *
- * \param[in] msg message to print
- * \param[in] len length of the message msg
-*/
-void print_string_hex(const unsigned char *msg, size_t len);
-
-/**
  * \fn void id_blockchain_ecdsa_sig_free(ID_BLOCKCHAIN_ECDSA_SIG *sig)
  *
  * \brief Desallocate the memory of an ECDSA signature
  *
  * \param[in] sign signature to desallocate
-*/
+ */
 void id_blockchain_ecdsa_sig_free(ID_BLOCKCHAIN_ECDSA_SIG *sig);
 
 #endif /* ID_BLOCKCHAIN_SIGNATURE_H */
