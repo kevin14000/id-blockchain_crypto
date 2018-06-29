@@ -23,7 +23,7 @@ SRC=$(wildcard $(SRCDIR)/*.c)
 # Les objets correspondants à créer
 OBJ=$(SRC:$(SRCDIR)/%.c=$(LIBDIR)/%.o)
 # Les exécutables à créer
-BIN=$(BINDIR)/test
+BIN=$(BINDIR)/ID-Blockchain_test
 
 
 .PHONY : clean superclean ExecuteTest
@@ -39,7 +39,7 @@ $(LIBDIR)/%.o: $(SRCDIR)/%.c $(HEADDIR)/*.h
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 ExecuteTest:
-	./$(BINDIR)/test
+	./$(BIN)
 
 # Nettoyage
 clean:
@@ -47,4 +47,4 @@ clean:
 
 # Nettoyage complet
 superclean: clean
-	rm $(BINDIR)/*
+	rm $(BIN)
