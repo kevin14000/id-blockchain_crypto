@@ -13,8 +13,8 @@
  *
  * \date 2018-06-29
  */
-#ifndef ID_BLOCKCHAIN_SIGNATURE_H
-#define ID_BLOCKCHAIN_SIGNATURE_H
+#ifndef __ID_BLOCKCHAIN_SIGNATURE_H__
+#define __ID_BLOCKCHAIN_SIGNATURE_H__
 
 #include <openssl/ec.h>
 #include <openssl/bn.h>
@@ -221,4 +221,4 @@ int id_blockchain_ecdsa521_do_verify(const unsigned char *msg,
  */
 void id_blockchain_ecdsa_sig_free(ID_BLOCKCHAIN_ECDSA_SIG *sig);
 
-#endif /* ID_BLOCKCHAIN_SIGNATURE_H */
+#endif /* __ID_BLOCKCHAIN_SIGNATURE_H__ */

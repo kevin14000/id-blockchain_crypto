@@ -11,8 +11,8 @@
  *
  * \date 2018-06-29
  */
-#ifndef ID_BLOCKCHAIN_HASHING_H
-#define ID_BLOCKCHAIN_HASHING_H
+#ifndef __ID_BLOCKCHAIN_HASHING_H__
+#define __ID_BLOCKCHAIN_HASHING_H__
 
 #include <openssl/sha.h>
 
@@ -51,4 +51,4 @@ void id_blockchain_sha512(const unsigned char *byte_string,
 			  size_t len,
 			  unsigned char digest[SHA512_DIGEST_LENGTH]);
 
-#endif /* ID_BLOCKCHAIN_HASHING_H */
+#endif /* __ID_BLOCKCHAIN_HASHING_H__ */
